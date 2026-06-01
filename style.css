@@ -988,19 +988,19 @@ body{
  padding:8px 28px;
   }
 
-
   .hero-content{
 
-    padding-top:50px;
+    padding-top:0px;
   }
 
-  .hero-content h1{
 
+  .hero-content h1{
+    margin-bottom: 0px;
     line-height:1.25;
   }
 
   .hero-content p{
-
+     margin-bottom: 15px;
     font-size:14px;
   }
 
@@ -1038,6 +1038,8 @@ body{
   .tag{
     font-size: 14px;
     padding: 10px 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -3655,7 +3657,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   }
 
   .pricing-card button{
-
+    padding: 10px 10px;
     width:100%;
   }
 }

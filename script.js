@@ -524,7 +524,7 @@ window.addEventListener("load",()=>{
 
     loader.style.visibility = "hidden";
 
-  },2500);
+  },2000);
 
 });
 
