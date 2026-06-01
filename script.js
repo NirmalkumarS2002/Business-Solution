@@ -265,107 +265,107 @@ prevBtn.addEventListener("click",()=>{
 });
 
 
-// /* =========================
-//    COUNTER ANIMATION FIX
-// ========================= */
+/* =========================
+   COUNTER ANIMATION FIX
+========================= */
 
-// const counters = document.querySelectorAll(".stats-item h3");
+const counters = document.querySelectorAll(".stats-item h3");
 
-// /* RESET TO 0 */
+/* RESET TO 0 */
 
-// counters.forEach(counter=>{
+counters.forEach(counter=>{
 
-//   counter.setAttribute("data-target",counter.innerText);
+  counter.setAttribute("data-target",counter.innerText);
 
-//   if(counter.innerText.includes("%")){
+  if(counter.innerText.includes("%")){
 
-//     counter.innerText = "0%";
+    counter.innerText = "0%";
 
-//   }else if(counter.innerText.includes("B")){
+  }else if(counter.innerText.includes("B")){
 
-//     counter.innerText = "0B+";
+    counter.innerText = "0B+";
 
-//   }else{
+  }else{
 
-//     counter.innerText = "0K+";
-//   }
+    counter.innerText = "0K+";
+  }
 
-// });
+});
 
-// /* START COUNTER */
+/* START COUNTER */
 
-// function startCounter(){
+function startCounter(){
 
-//   counters.forEach(counter=>{
+  counters.forEach(counter=>{
 
-//     const targetText =
-//     counter.getAttribute("data-target");
+    const targetText =
+    counter.getAttribute("data-target");
 
-//     const target =
-//     parseInt(targetText.replace(/\D/g,""));
+    const target =
+    parseInt(targetText.replace(/\D/g,""));
 
-//     let count = 0;
+    let count = 0;
 
-//     const updateCounter = ()=>{
+    const updateCounter = ()=>{
 
-//       const increment =
-//       Math.ceil(target / 100);
+      const increment =
+      Math.ceil(target / 100);
 
-//       count += increment;
+      count += increment;
 
-//       if(count >= target){
+      if(count >= target){
 
-//         counter.innerText = targetText;
+        counter.innerText = targetText;
 
-//       }else{
+      }else{
 
-//         /* SYMBOL CHECK */
+        /* SYMBOL CHECK */
 
-//         if(targetText.includes("%")){
+        if(targetText.includes("%")){
 
-//           counter.innerText = count + "%";
+          counter.innerText = count + "%";
 
-//         }else if(targetText.includes("B")){
+        }else if(targetText.includes("B")){
 
-//           counter.innerText = count + "B+";
+          counter.innerText = count + "B+";
 
-//         }else{
+        }else{
 
-//           counter.innerText = count + "K+";
-//         }
+          counter.innerText = count + "K+";
+        }
 
-//         requestAnimationFrame(updateCounter);
-//       }
-//     };
+        requestAnimationFrame(updateCounter);
+      }
+    };
 
-//     updateCounter();
+    updateCounter();
 
-//   });
+  });
 
-// }
+}
 
-// /* SCROLL START */
+/* SCROLL START */
 
-// const statsBox =
-// document.querySelector(".stats-box");
+const statsBox =
+document.querySelector(".stats-box");
 
-// const observer =
-// new IntersectionObserver((entries)=>{
+const observer =
+new IntersectionObserver((entries)=>{
 
-//   entries.forEach(entry=>{
+  entries.forEach(entry=>{
 
-//     if(entry.isIntersecting){
+    if(entry.isIntersecting){
 
-//       startCounter();
+      startCounter();
 
-//       observer.unobserve(statsBox);
-//     }
+      observer.unobserve(statsBox);
+    }
 
-//   });
+  });
 
-// },{ threshold:0.4 });
+},{ threshold:0.4 });
 
-// observer.observe(statsBox);
+observer.observe(statsBox);
 
 
 /* UPDATE SLIDE */
