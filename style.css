@@ -1240,7 +1240,7 @@ body{
 
   border-radius:30px;
 
-  border:8px solid rgba(124,58,237,0.5);
+  border:6px solid rgba(124,58,237,0.5);
 
   box-shadow:
   0 20px 60px rgba(124,58,237,0.25);
@@ -1690,6 +1690,7 @@ body{
 
   .business-image img{
 
+     border:3px solid rgba(124,58,237,0.5);
     border-radius:24px;
   }
 }
@@ -2055,7 +2056,7 @@ body{
 
   background-size:cover;
 
-  background-position:center;
+  background-position: top center;
 
   position:relative;
 
@@ -2836,7 +2837,7 @@ body{
     min-height: 50vh;
 
     /* BACKGROUND IMAGE */
-    background: url('./src/hero1.webp');
+    background: url('./src/count.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
