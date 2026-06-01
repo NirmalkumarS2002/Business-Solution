@@ -90,6 +90,22 @@ hoverItems.forEach((item)=>{
 
 // });
 
+const navbar =
+document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+  if(window.scrollY > 50){
+
+    navbar.classList.add("active");
+
+  }else{
+
+    navbar.classList.remove("active");
+  }
+
+});
+
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 

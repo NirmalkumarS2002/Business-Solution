@@ -129,7 +129,6 @@ body{
   }
 }
 /* nav bar */
-
 .navbar{
 
   width:100%;
@@ -142,13 +141,32 @@ body{
 
   position:fixed;
 
-  top:0px;
+  top:0;
 
   left:50%;
 
   transform:translateX(-50%);
 
   z-index:9999;
+
+  /* INITIAL TRANSPARENT */
+
+  background:transparent;
+
+  border-bottom:1px solid transparent;
+
+  backdrop-filter:none;
+
+  box-shadow:none;
+
+  overflow:hidden;
+
+  transition:0.4s ease;
+}
+
+/* SCROLL EFFECT */
+
+.navbar.active{
 
   background:
   linear-gradient(
@@ -157,21 +175,21 @@ body{
   rgba(124,58,237,0.12)
   );
 
-  border-bottom:1px solid rgba(162, 0, 255, 0.45);
+  border-bottom:
+  1px solid rgba(162,0,255,0.45);
 
   backdrop-filter:blur(20px);
 
-
   box-shadow:
 
-  0 0 18px rgba(226, 56, 248, 0.28),
+  0 0 18px rgba(226,56,248,0.28),
 
   0 0 35px rgba(124,58,237,0.22),
 
   inset 0 0 12px rgba(255,255,255,0.04);
-
-  overflow:hidden;
 }
+
+/* GLOW LINE */
 
 .navbar::before{
 
@@ -181,8 +199,6 @@ body{
 
   inset:0;
 
-  border-radius:70px;
-
   background:
   linear-gradient(
   90deg,
@@ -191,9 +207,23 @@ body{
   transparent
   );
 
+  transform:translateX(-100%);
+
+  opacity:0;
+
+  transition:0.4s ease;
+}
+
+/* SHOW GLOW ONLY ON SCROLL */
+
+.navbar.active::before{
+
+  opacity:1;
+
   animation:navGlow 4s linear infinite;
 }
 
+/* ANIMATION */
 
 @keyframes navGlow{
 
