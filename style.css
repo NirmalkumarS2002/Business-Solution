@@ -103,7 +103,7 @@ body{
 
   background-image:
   linear-gradient(
-  rgba(2,6,23,0.75),
+  rgba(2, 6, 23, 0.856),
   rgba(2,6,23,0.75)
   ),
   url("./src/hero1.png");
@@ -195,7 +195,7 @@ body{
 
   box-shadow:
 
-  0 0 18px rgba(56,189,248,0.28),
+  0 0 18px rgba(226, 56, 248, 0.28),
 
   0 0 35px rgba(124,58,237,0.22),
 
@@ -270,7 +270,7 @@ body{
 
 .nav-links a{
 
-  color:rgba(255,255,255,0.8);
+  color:rgb(255, 255, 255);
 
   text-decoration:none;
 
@@ -329,8 +329,12 @@ body{
 
   transition:.4s ease;
 
-  box-shadow:
-  0 6px 24px rgb(208, 55, 255);
+    box-shadow:
+  0 0 19px rgba(132, 0, 255,0.5),
+  0 0 18px rgba(56,189,248,0.18);
+
+  /* box-shadow:
+  0 6px 15px rgb(208, 55, 255); */
 }
 
 .nav-btn:hover{
@@ -347,7 +351,7 @@ body{
 
   display:none;
 
-  font-size:28px;
+  font-size:clamp(20px,2.5vw,28px);
 
   color:#fff;
 
@@ -361,6 +365,7 @@ body{
 .hero-content{
 
   width:100%;
+
 
   min-height:88vh;
 
@@ -380,50 +385,53 @@ body{
 }
 
 /* TAG */
-
 .tag{
 
-  padding:10px 22px;
+  padding:12px 18px;
+  font-size: 16px;
 
+  margin-bottom: 30px;
   border-radius:50px;
-  color: white;
-  background:rgba(124,58,237,0.10);
 
-  /* GLOW BORDER */
+  color:#fff;
 
-  border:1px solid rgba(56,189,248,0.45);
+  background:rgba(10,10,15,0.75);
+
+  border:1.5px solid transparent;
+
+  background-image:
+
+  linear-gradient(
+  rgba(10,10,15,0.85),
+  rgba(10,10,15,0.85)
+  ),
+
+  linear-gradient(
+  135deg,
+  #a855f7,
+  #38bdf8
+  );
+
+  background-origin:border-box;
+
+  background-clip:padding-box,border-box;
 
   backdrop-filter:blur(12px);
 
   display:flex;
+
   align-items:center;
+
   gap:10px;
 
-  margin-bottom:30px;
-
-  font-size:14px;
-
-  animation:fadeDown .7s ease both;
-
-  /* BORDER GLOW */
-
   box-shadow:
-
-  0 0 10px rgba(56,189,248,0.25),
-
-  0 0 20px rgba(124,58,237,0.18),
-
-  inset 0 0 8px rgba(255,255,255,0.04);
+  0 0 15px rgba(168,85,247,0.35),
+  0 0 25px rgba(56,189,248,0.25);
 }
-
-/* ICON */
 
 .tag i{
 
-  color:#38bdf8;
-
-  text-shadow:
-  0 0 12px rgba(56,189,248,0.55);
+  color:#c084fc;
 }
 
 /* =========================
@@ -459,10 +467,10 @@ body{
   background:
   linear-gradient(
   135deg,
-  #f5f3ff 0%,
-  #c4b5fd 25%,
-  #8b5cf6 55%,
-  #60a5fa 80%,
+
+  #e800fd 25%,
+  #2c80ff 55%,
+  #f820ff 80%,
   #38bdf8 100%
   );
 
@@ -596,20 +604,42 @@ body{
 
 .btn-outline{
 
-  background:rgba(255,255,255,0.07);
+  background:transparent; /* REMOVE BG */
 
-  border:1px solid rgba(255,255,255,0.2);
+  border:1.5px solid transparent;
+
+  background-image:
+  linear-gradient(#000000,#000000),
+
+  linear-gradient(
+  135deg,
+  #a855f7,
+  #38bdf8
+  );
+
+  background-origin:border-box;
+
+  background-clip:padding-box,border-box;
 
   color:#fff;
 
   backdrop-filter:blur(10px);
-}
 
+   box-shadow:
+  0 8px 28px rgba(124,58,237,0.4);
+
+}
 .btn-outline:hover{
 
   transform:translateY(-5px) scale(1.04);
 
-  border-color:#a78bfa;
+ 
+  background:linear-gradient(135deg,#7c3aed,#00c2ff);
+
+  color:#fff;
+
+ box-shadow:
+  0 15px 40px rgba(0,194,255,0.45);
 }
 
 /* EXPERIENCE */
@@ -822,8 +852,7 @@ body{
 @media(max-width:600px){
 
   .navbar{
-
-    border-radius:22px;
+ padding:8px 28px;
   }
 
 
@@ -873,6 +902,11 @@ body{
     height:42px;
 
     font-size:14px;
+  }
+
+  .tag{
+    font-size: 14px;
+    padding: 10px 10px;
   }
 }
 

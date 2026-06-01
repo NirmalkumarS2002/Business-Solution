@@ -137,7 +137,7 @@ let index = 0;
 function updateSlide(){
 
   hero.style.backgroundImage =
-  `linear-gradient(rgba(2,6,23,0.75),rgba(2,6,23,0.75)),
+  `linear-gradient(rgba(0, 0, 0, 0.8),rgb(0, 0, 0)),
   url('${slides[index].image}')`;
 
   heroTitle.style.opacity = 0;
