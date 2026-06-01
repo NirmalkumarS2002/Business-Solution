@@ -607,6 +607,12 @@ body{
   color:rgba(219,234,254,0.85);
 }
 
+.brands a{
+
+  color:rgba(219,234,254,0.85);
+}
+
+
 .brands i{
 
   transition:.4s;

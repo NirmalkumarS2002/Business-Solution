@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 Page</title>
+
+<!-- GOOGLE FONT -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  font-family:'Poppins',sans-serif;
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+  linear-gradient(
+  135deg,
+  rgba(2,6,23,0.96),
+  rgba(15,23,42,0.92),
+  rgba(17,24,39,0.92)
+  );
+}
+
+/* CONTAINER */
+
+.error-container{
+
+
+
+  width:90%;
+  max-width:900px;
+
+  padding:80px 40px;
+
+  text-align:center;
+}
+
+/* 404 NUMBER */
+
+.error-code{
+
+  font-size:clamp(80px,18vw,220px);
+
+  font-weight:800;
+
+  line-height:1;
+
+  margin-bottom:20px;
+
+  background:
+  linear-gradient(
+  to right,
+  #ff00ff,
+  #7c3aed,
+  #38bdf8
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  filter:
+  drop-shadow(0 0 25px rgba(56,189,248,0.35));
+}
+
+/* TITLE */
+
+.error-title{
+
+  font-size:clamp(25px,5vw,70px);
+
+  color:white;
+
+  font-weight:700;
+
+  margin-bottom:25px;
+}
+
+/* TEXT */
+
+.error-text{
+
+  max-width:700px;
+
+  margin:auto;
+
+  color:rgba(255,255,255,0.65);
+
+  line-height:1.9;
+
+  font-size:18px;
+
+  margin-bottom:45px;
+}
+
+/* BUTTONS */
+
+.error-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+/* COMMON BUTTON */
+
+.btn{
+
+  padding:18px 38px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-size:17px;
+
+  font-weight:600;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  transition:0.4s ease;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+
+  background:linear-gradient(135deg,#7c3aed,#00c2ff);
+
+  color:white;
+
+  box-shadow:
+  0 0 30px rgba(56,189,248,0.25);
+}
+
+.btn-primary:hover{
+
+  transform:
+  translateY(-5px)
+  scale(1.03);
+}
+
+/* OUTLINE BUTTON */
+
+.btn-outline{
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border:1px solid
+  rgba(255,255,255,0.08);
+
+  color:white;
+
+  backdrop-filter:blur(15px);
+}
+
+.btn-outline:hover{
+
+  background:
+  rgba(255,255,255,0.12);
+
+  transform:
+  translateY(-5px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .error-container{
+
+    padding:60px 20px;
+  }
+
+  .error-text{
+
+    font-size:14px;
+  }
+
+  .btn{
+
+
+    padding:12px 30px;
+    justify-content:center;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CONTAINER -->
+
+<div class="error-container">
+
+  <!-- 404 -->
+
+  <h1 class="error-code">
+    404
+  </h1>
+
+  <!-- TITLE -->
+
+  <h2 class="error-title">
+    Oops! Page Not Found
+  </h2>
+
+  <!-- TEXT -->
+
+  <p class="error-text">
+
+    The page you are looking for might have been removed,
+    renamed, or is temporarily unavailable.
+
+  </p>
+
+  <!-- BUTTONS -->
+
+  <div class="error-buttons">
+
+    <a href="index.html" class="btn btn-primary">
+
+      <i class="fa-solid fa-house"></i>
+
+      Back To Home
+
+    </a>
+
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

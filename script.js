@@ -402,3 +402,57 @@ function changeHeroContent(){
 }
 
 changeHeroContent();
+
+
+
+// 404page
+
+
+
+const logBtn = document.querySelector(".nav-btn");
+
+logBtn.addEventListener("click",()=>{
+
+  window.location.href = "404.html";
+
+});
+
+const hobtn=document.querySelector(".btn-outline");
+
+hobtn.addEventListener("click",()=>{
+
+  window.location.href = "404.html";
+
+});
+
+const hobtn2=document.querySelector(".btn-primary");
+
+hobtn2.addEventListener("click",()=>{
+
+  window.location.href = "404.html";
+
+});
+
+const hobtn3=document.querySelector(".homta");
+
+hobtn3.addEventListener("click",()=>{
+
+  window.location.href = "404.html";
+
+});
+
+
+
+const errBtns =
+document.querySelectorAll(".errbtn");
+
+errBtns.forEach((btn)=>{
+
+  btn.addEventListener("click",()=>{
+
+    window.location.href = "./404.html";
+
+  });
+
+});
+
