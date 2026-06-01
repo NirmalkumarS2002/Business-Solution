@@ -456,3 +456,56 @@ errBtns.forEach((btn)=>{
 
 });
 
+
+const hrBtns =
+document.querySelectorAll(".hbtn");
+
+hrBtns.forEach((btn)=>{
+
+  btn.addEventListener("click",()=>{
+
+    window.location.href = "./index.html";
+
+  });
+
+});
+
+
+/* SUBSCRIBE BUTTON */
+
+const subscribeBtn =
+document.getElementById("subscribeBtn");
+
+const emailInput =
+document.getElementById("emailInput");
+
+subscribeBtn.addEventListener("click",()=>{
+
+  const email =
+  emailInput.value.trim();
+
+  /* EMAIL CHECK */
+
+  const emailPattern =
+  /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if(email === ""){
+
+    alert("Please enter your email");
+
+  }else if(!email.match(emailPattern)){
+
+    alert("Please enter valid email");
+
+  }else{
+
+    /* GO TO 404 PAGE */
+
+    window.location.href =
+    "./404.html";
+
+  }
+
+});
+
+
