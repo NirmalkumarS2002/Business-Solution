@@ -2766,3 +2766,146 @@ body{
     justify-content:center;
   }
 }
+
+  /* ours section */
+
+.our-section{
+    width: 100%;
+    min-height: 50vh;
+
+    /* BACKGROUND IMAGE */
+    background: url('./src/hero1.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* IMPORTANT */
+    background-attachment: fixed;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+
+.our-content{
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 800px;
+
+    text-align: center;
+    color: white;
+}
+
+.our-content span{
+    color: white;
+    font-size: clamp(15px,1.6vw,18px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.our-content span::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:-10px;
+
+  transform:translateX(-50%);
+
+  width:60px;
+  height:2px;
+
+  background:
+  linear-gradient(to right,#8b5cf6,#38bdf8);
+}
+
+.our-content h1{
+      font-size: clamp(25px, 4vw, 45px);
+    line-height: 1.1;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.our-content p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #e2e8f0;
+    margin-bottom: 35px;
+}
+
+.our-content a{
+    display: inline-block;
+    padding: 15px 40px;
+
+      background:
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #7c3aed
+  );
+
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.our-content a:hover{
+    transform: translateY(-5px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:768px){
+
+    .our-section{
+        background-attachment: scroll;
+    }
+
+
+    .our-content p{
+        font-size: 17px;
+    }
+
+}
+
+@media(max-width:500px){
+
+
+    .our-content p{
+        font-size: 15px;
+    }
+
+    .our-content a{
+        padding: 13px 30px;
+        font-size: 14px;
+    }
+
+}
