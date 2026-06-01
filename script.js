@@ -145,7 +145,7 @@ const nextBtn = document.getElementById("nextBtn");
 const slides = [
 
 {
-  image:"./src/hero1.png",
+  image:"./src/hero1.webp",
 
   title:"Empowering Businesses With Innovative Digital Solutions.",
 
@@ -153,7 +153,7 @@ const slides = [
 },
 
 {
-  image:"./src/hero3.png",
+  image:"./src/hero3.webp",
 
   title:"Transform Your Company With Smart Business Strategies.",
 
@@ -161,9 +161,9 @@ const slides = [
 },
 
 {
-  image:"./src/hero2.png",
+  image:"./src/hero2.webp",
 
-  title:"Grow Faster With Powerful Digital Services.",
+  title:"Grow Faster With Powerful Digital and tech Services.",
 
   text:"From startups to enterprises, we create scalable solutions for every business."
 }
@@ -177,8 +177,10 @@ let index = 0;
 function updateSlide(){
 
   hero.style.backgroundImage =
-  `linear-gradient(rgba(0, 0, 0, 0.8),rgb(0, 0, 0)),
-  url('${slides[index].image}')`;
+  ` linear-gradient(
+  rgba(2, 6, 23, 0.856),
+  rgba(2,6,23,0.75)
+  ),url('${slides[index].image}')`;
 
   heroTitle.style.opacity = 0;
 
@@ -350,3 +352,37 @@ prevBtn.addEventListener("click",()=>{
 // observer.observe(statsBox);
 
 
+/* UPDATE SLIDE */
+
+
+function changeHeroContent(){
+
+  /* ONLY BG IMAGE CHANGE */
+
+  hero.style.backgroundImage =
+  `linear-gradient(rgba(0,0,0,0.8),rgb(0,0,0)),
+   url('${slides[index].image}')`;
+
+  /* REMOVE OLD ANIMATION */
+
+  heroTitle.classList.remove("animate-text");
+  heroText.classList.remove("animate-text");
+
+  /* RESTART ANIMATION */
+
+  void heroTitle.offsetWidth;
+  void heroText.offsetWidth;
+
+  /* CHANGE TEXT */
+
+  heroTitle.innerText = slides[index].title;
+
+  heroText.innerText = slides[index].text;
+
+  /* ADD ANIMATION ONLY TO TEXT */
+
+  heroTitle.classList.add("animate-text");
+  heroText.classList.add("animate-text");
+}
+
+changeHeroContent();
