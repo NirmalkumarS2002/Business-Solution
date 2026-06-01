@@ -65,30 +65,70 @@ hoverItems.forEach((item)=>{
 
 /* =========================MOBILE MENu========================= */
 
-const menuToggle = document.getElementById("menuToggle");
+// const menuToggle = document.getElementById("menuToggle");
 
+// const navLinks = document.getElementById("navLinks");
+
+// menuToggle.addEventListener("click",()=>{
+
+//   navLinks.classList.toggle("active");
+
+//   if(navLinks.classList.contains("active")){
+
+//     menuToggle.innerHTML =
+//     `<i class="fa-solid fa-xmark"></i>`;
+
+//     document.body.style.overflow = "hidden";
+
+//   }else{
+
+//     menuToggle.innerHTML =
+//     `<i class="fa-solid fa-bars"></i>`;
+
+//     document.body.style.overflow = "auto";
+//   }
+
+// });
+
+const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click",()=>{
+menuToggle.addEventListener("click", () => {
 
   navLinks.classList.toggle("active");
 
   if(navLinks.classList.contains("active")){
 
     menuToggle.innerHTML =
-    `<i class="fa-solid fa-xmark"></i>`;
-
-    document.body.style.overflow = "hidden";
+    '<i class="fa-solid fa-xmark"></i>';
 
   }else{
 
     menuToggle.innerHTML =
-    `<i class="fa-solid fa-bars"></i>`;
-
-    document.body.style.overflow = "auto";
+    '<i class="fa-solid fa-bars"></i>';
   }
-
 });
+
+const loginBtn = document.querySelector(".login-btn");
+
+function checkMobileMenu(){
+
+  if(window.innerWidth <= 1100){
+
+    navLinks.appendChild(loginBtn);
+
+  }else{
+
+    document.querySelector(".navbar").insertBefore(
+      loginBtn,
+      menuToggle
+    );
+  }
+}
+
+checkMobileMenu();
+
+window.addEventListener("resize",checkMobileMenu);
 
 /* =========================HERO SLIDER========================= */
 
