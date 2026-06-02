@@ -2590,7 +2590,7 @@ body{
   transparent
   );
 
-  transform:rotate(25deg);
+
 
   transition:.7s;
 }
@@ -2680,39 +2680,37 @@ body{
 @media(max-width:768px){
 
   .trusted-section{
-
-    padding:80px 5%;
+    padding:70px 4%;
   }
 
   .trusted-container{
-
-    padding:45px 22px;
+    width:100%;
+    max-width:100%;
+    padding:35px 16px;
+    border-radius:22px;
   }
 
   .trusted-container h2{
-
     margin-bottom:35px;
   }
 
   .brand-grid{
-
     grid-template-columns:1fr;
   }
 
   .brand-item{
-
-    height:78px;
+    height:74px;
+    border-radius:12px;
   }
 
   .brand-item i{
-
     font-size:26px;
   }
 
   .brand-item span{
-
-    font-size:16px;
+    font-size:15px;
   }
+
 }
 
 
