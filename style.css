@@ -4646,7 +4646,6 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   transform:translateY(0);
 }
-
 /* =========================
    FOOTER
 ========================= */
@@ -4655,7 +4654,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   width:100%;
 
-  padding:70px 6% 25px;
+  padding:90px 7% 30px;
 
   position:relative;
 
@@ -4663,23 +4662,35 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   background:
   linear-gradient(
-  135deg,
-  #050816,
-  #0f172a,
-  #111827
+  160deg,
+  #0b1646 0%,
+  #0d0630 45%,
+  #130524 75%,
+  #07091d 100%
   );
 
   color:#fff;
+
+  display:grid;
+
+  grid-template-columns:
+  1.5fr 1fr 1fr 1fr;
+
+  gap:50px;
 }
 
-/* TOP LINE */
+/* =========================
+   TOP LINE
+========================= */
 
 .footer-line{
+
+  grid-column:1/-1;
 
   width:100%;
   height:1px;
 
-  margin-bottom:55px;
+  margin-bottom:20px;
 
   background:
   linear-gradient(
@@ -4692,24 +4703,14 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 }
 
 /* =========================
-   FOOTER GRID
+   COLUMN
 ========================= */
-
-.footer{
-
-  display:grid;
-
-  grid-template-columns:
-  1.3fr 1fr 1fr 1fr;
-
-  gap:45px;
-}
-
-/* COLUMN */
 
 .footer-column{
 
   position:relative;
+
+  z-index:2;
 }
 
 /* LOGO */
@@ -4718,22 +4719,20 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   width:190px;
 
-  margin-bottom:22px;
-
-  object-fit:contain;
+  margin-bottom:20px;
 }
 
 /* DESCRIPTION */
 
 .footer-column p{
 
-  color:rgba(255,255,255,0.7);
+  color:rgba(255,255,255,0.72);
 
   line-height:1.9;
 
   font-size:15px;
 
-  margin-bottom:25px;
+  margin-bottom:24px;
 
   max-width:320px;
 }
@@ -4744,28 +4743,46 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   font-size:24px;
 
-  margin-bottom:22px;
+  margin-bottom:24px;
 
   font-weight:700;
+
+  position:relative;
 }
 
-/* LIST */
+.footer-column h3::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:45px;
+  height:3px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+  to right,
+  #8b5cf6,
+  #38bdf8
+  );
+}
+
+/* LINKS */
 
 .footer-column ul{
 
   list-style:none;
-
-  padding:0;
 }
-
-/* LIST ITEM */
 
 .footer-column ul li{
 
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
-
-/* LINK */
 
 .footer-column ul li a{
 
@@ -4800,8 +4817,8 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
 .footer-social a{
 
-  width:40px;
-  height:40px;
+  width:46px;
+  height:46px;
 
   border-radius:14px;
 
@@ -4822,7 +4839,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   border:
   1px solid rgba(255,255,255,0.08);
 
-  transition:.3s ease;
+  transition:.35s ease;
 }
 
 .footer-social a:hover{
@@ -4838,31 +4855,92 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 }
 
 /* =========================
-   SUBSCRIBE
+   SUBSCRIBE BOX
 ========================= */
 
 .footer-subscribe{
 
   grid-column:1/-1;
 
-  margin-top:10px;
+  margin-top:20px;
 }
 
-/* INPUT BOX */
+/* BOX */
+
+.subscribe-box{
+
+  max-width:350px;
+}
+
+/* HEADING */
+
+.subscribe-box h2{
+
+   font-size:26px;
+
+  margin-bottom:14px;
+
+  font-weight:700;
+
+  position:relative;
+
+  display:inline-block;
+}
+
+
+.subscribe-box h2::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-10px;
+
+  width:55px;
+  height:3px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+  to right,
+  #8b5cf6,
+  #38bdf8
+  );
+}
+
+/* TEXT */
+
+.subscribe-box p{
+
+  color:rgba(255,255,255,0.7);
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  margin-bottom:18px;
+}
+
+/* INPUT AREA */
 
 .subscribe-box{
 
   display:flex;
 
-  overflow:hidden;
+  flex-direction:column;
+}
 
-  border-radius:16px;
+/* INPUT WRAP */
 
-  background:
-  rgba(255,255,255,0.05);
+.subscribe-box .input-wrap{
 
-  border:
-  1px solid rgba(255,255,255,0.08);
+  display:flex;
+
+  gap:12px;
+
+  margin-bottom:18px;
 }
 
 /* INPUT */
@@ -4871,13 +4949,18 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   flex:1;
 
-  padding:18px 20px;
+  height:55px;
 
   border:none;
 
   outline:none;
 
-  background:transparent;
+  padding:0 18px;
+
+  border-radius:12px;
+
+  background:
+  rgba(255,255,255,0.08);
 
   color:#fff;
 
@@ -4893,9 +4976,12 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
 .subscribe-box button{
 
-  padding:18px 34px;
+  width:60px;
+  height:55px;
 
   border:none;
+
+  border-radius:12px;
 
   background:
   linear-gradient(
@@ -4906,11 +4992,19 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   color:#fff;
 
-  font-size:15px;
-
-  font-weight:600;
+  font-size:18px;
 
   cursor:pointer;
+
+  transition:.35s ease;
+}
+
+.subscribe-box button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 25px rgba(56,189,248,0.35);
 }
 
 /* =========================
@@ -4921,7 +5015,6 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
   grid-column:1/-1;
 
-  margin-top:35px;
 
   padding-top:22px;
 
@@ -4939,8 +5032,6 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   flex-wrap:wrap;
 }
 
-/* COPYRIGHT */
-
 .footer-bottom p{
 
   color:rgba(255,255,255,0.65);
@@ -4948,7 +5039,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   font-size:15px;
 }
 
-/* BOTTOM LINKS */
+/* LINKS */
 
 .footer-bottom-links{
 
@@ -4966,8 +5057,6 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   color:#fff;
 
   font-size:15px;
-
-  transition:.3s ease;
 }
 
 .footer-bottom-links a:hover{
@@ -4979,7 +5068,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
    TABLET
 ========================= */
 
-@media(max-width:1100px){
+@media(max-width:991px){
 
   .footer{
 
@@ -4999,11 +5088,9 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
 
     grid-template-columns:1fr;
 
-    padding:60px 5% 25px;
+    padding:65px 5% 30px;
 
     text-align:center;
-
-    gap:40px;
   }
 
   .footer-column{
@@ -5013,6 +5100,13 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
     flex-direction:column;
 
     align-items:center;
+  }
+
+  .footer-column h3::after{
+
+    left:50%;
+
+    transform:translateX(-50%);
   }
 
   .footer-column p{
@@ -5025,15 +5119,79 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
     justify-content:center;
   }
 
-  .subscribe-box{
+ .subscribe-box{
 
-    flex-direction:column;
+  margin:auto;
+    padding:30px 22px;
+
+    border-radius:18px;
+
+    text-align:center;
+  }
+
+  .footer-subscribe{
+
+  display:flex;
+
+  justify-content:center;
+
+  width:100%;
+}
+
+  .subscribe-box h2{
+
+
+    display:inline-block;
+  }
+
+  .subscribe-box h2::after{
+
+    left:50%;
+
+    transform:translateX(-50%);
+  }
+
+  .subscribe-box p{
+
+    font-size:15px;
+
+    line-height:1.8;
+  }
+.input-wrap{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:12px;
+
+  width:100%;
+}
+
+  .subscribe-box input{
+
+    height:42px;
+
+    font-size:14px;
+
+      width:100%;
+
+  max-width:240px;
   }
 
   .subscribe-box button{
 
-    width:100%;
+    width:60px;
+
+    min-width:60px;
+
+    height:42px;
+
+    border-radius:12px;
   }
+
 
   .footer-bottom{
 
@@ -5048,43 +5206,6 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   }
 
 }
-
-/* SMALL MOBILE */
-
-@media(max-width:500px){
-
-  .footer-column img{
-
-    width:170px;
-  }
-
-  .footer-column h3{
-
-    font-size:22px;
-  }
-
-  .footer-column ul li a{
-
-    font-size:15px;
-  }
-
-  .footer-social a{
-
-    width:38px;
-    height:38px;
-
-    font-size:16px;
-  }
-
-  .footer-bottom p,
-  .footer-bottom-links a{
-
-    font-size:13px;
-  }
-
-}
-
-
 /* =========================
    FOOTER ANIMATION
 ========================= */
@@ -5179,7 +5300,7 @@ background: radial-gradient(circle, rgba(180, 0, 255, 0.12), transparent 70%);
   transition:
   opacity 1s ease,
   transform 1s ease;
-
+   margin-top:0;
   transition-delay:.5s;
 }
 
